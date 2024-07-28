@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Números Lotofácil</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+	<!----======== Font Awesome 5 JAVASCRIPT  ENTRE NO SITE E PEGUE O CÓDIGO (afb02bf9ac)======== -->
+	<!--Márciofernando.maia@yahoo.com.br-->
+	<script src="https://kit.fontawesome.com/2fa2c650ed.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Números Lotofácil</h1>
+        <small>Sorteia 15, ganhe com 11, 12, 13, 14 ou 15 números dentre os 25. Marque de 15 a 20 números.</small>
+
+        <p><small>Selecione pelo menos 15 números fixos</small></p>
+        <div class="number-selection" id="fixed-numbers">
+            <label for="fixed-number-1">Número Fixo 1:</label>
+            <input type="number" id="fixed-number-1" min="1" max="25" onchange="validateDuplicateNumbers()">
+        </div>
+        <button onclick="addFixedNumberInput()">Adicionar Número Fixo</button>
+        <button onclick="generateNumbers()">Gerar Números</button>
+        <button onclick="saveGame()">Salvar Jogo</button>
+        <button onclick="exportToExcel()">Exportar para Excel</button>
+        <div id="generated-numbers" class="numbers-display"></div>
+        <div id="saved-games" class="numbers-display"></div>
+
+
+        <h2>Desdobramento Lotofácil <a href="https://lotofacildes.netlify.app" target="_blank"><i class="fa-solid fa-right-long"></i></a></h2>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
